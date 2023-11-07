@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Images from "./Images";
-import Image from "next/image";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 const GalleryContainer = () => {
@@ -23,7 +22,7 @@ const GalleryContainer = () => {
         Gallery
       </div>
       <DragDropContext onDragEnd={onDragEnd}>
-        <Droppable droppableId="grid" direction="horizontal" spacing={8}>
+        <Droppable droppableId="grid" direction="both" spacing={8}>
           {(provided) => (
             <div
               className="grid grid-cols-5 gap-4 overflow-hidden p-8"
