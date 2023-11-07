@@ -40,7 +40,11 @@ const GalleryContainer = () => {
                       {...provided.dragHandleProps}
                       ref={provided.innerRef}
                     >
-                      <img src={item.image} className="rounded-xl" />
+                      <img
+                        src={item.image}
+                        className="rounded-xl"
+                        alt="image"
+                      />
                     </div>
                   )}
                 </Draggable>
